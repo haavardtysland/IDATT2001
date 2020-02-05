@@ -22,7 +22,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return String.format("%s%s", suit, face);
+        return String.mat("%s%s", suit, face);
     }
 
     public char getSuit() {

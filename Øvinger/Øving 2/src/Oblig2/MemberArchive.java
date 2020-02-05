@@ -1,6 +1,5 @@
 package Oblig2;
 
-import javax.swing.plaf.basic.BasicViewportUI;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Random;
@@ -18,7 +17,7 @@ public class MemberArchive {
     }
 
     public int findPoints(int memberNo, String password) {
-        for (int i = 0; i < this.list.size(); i++) {
+         for (int i = 0; i < this.list.size(); i++) {
             if (this.list.get(i).getMemberNo() == memberNo) {
                 if (this.list.get(i).okPassword(password)) {
                     return this.list.get(i).getPoints();
@@ -29,7 +28,7 @@ public class MemberArchive {
     }
 
     private BonusMember findMember(int memberNo) {
-        for (int i = 0; i < this.list.size(); i++) {
+         for (int i = 0; i < this.list.size(); i++) {
             if (this.list.get(i).getMemberNo() == memberNo) {
                 return this.list.get(i);
             }
@@ -38,7 +37,7 @@ public class MemberArchive {
     }
 
     public boolean registerPoints(int memberNo, int points) {
-            for(int i = 0; i < list.size(); i++) {
+            for (int i = 0; i < list.size(); i++) {
                 if(list.get(i).getMemberNo() == memberNo) {
                    list.get(i).registerPoints(points);
                     return true;
@@ -49,7 +48,7 @@ public class MemberArchive {
 
     private int findAvailableNo() {
         int memberNo = Math.abs(RANDOM_NUMBER.nextInt());
-        for(int i = 0; i < list.size(); i++)  {
+        for (int i = 0; i < list.size(); i++)  {
             if(list.get(i).getMemberNo() == memberNo) {
                 i = 0;
                 memberNo = RANDOM_NUMBER.nextInt();
@@ -85,7 +84,7 @@ public class MemberArchive {
    }
 
    public void checkMembers(LocalDate date) {
-        for(int i = 0; i < list.size(); i++) {
+       for (int i = 0; i < list.size(); i++) {
             if(list.get(i) instanceof BasicMember) {
                 list.set(i, checkSilverLimit(list.get(i).getMemberNo(), date));
                 list.set(i, checkGoldLimit(list.get(i).getMemberNo(), date));

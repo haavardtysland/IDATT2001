@@ -10,8 +10,8 @@ public class Deck {
     public Deck() {
         this.cards = new ArrayList();
 
-        for (int suit = 0; suit <= 3; suit++ ) {
-            for (int face = 1; face <=13 ; face++) {
+         (int suit = 0; suit <= 3; suit++ ) {
+             (int face = 1; face <=13 ; face++) {
                 cards.add(new Card(suits[suit], face));
             }
         }
@@ -25,7 +25,7 @@ public class Deck {
         int range = max - min + 1;
 
         // genererer tall fra 1 til 10 n ganger
-        for (int i = 0; i < n; i++) {
+         (int i = 0; i < n; i++) {
             int rand = (int) (Math.random() * range) + min;
                 randomCards.add(cards.get(rand));
                 cards.remove(cards.get(rand));
@@ -37,7 +37,7 @@ public class Deck {
     public void alleTing(ArrayList<Card> randomCards){
 
         //c skriver ut alle spar kort
-        randomCards.stream().filter(p -> p.getSuit() =='S').forEach(s -> System.out.println(s));
+        randomCards.stream().filter(p -> p.getSuit() =='S').Each(s -> System.out.println(s));
 
         //d samler alle hjertekort
         System.out.println(randomCards.stream().filter(p -> p.getSuit() == 'H').collect(Collectors.toList()));
@@ -62,7 +62,7 @@ public class Deck {
 
     public String toString() {
         String utskrift = "";
-        for(int i = 0; i < this.cards.size(); i++) {
+        (int i = 0; i < this.cards.size(); i++) {
             utskrift += this.cards.get(i) + "\n";
         }
         return utskrift;

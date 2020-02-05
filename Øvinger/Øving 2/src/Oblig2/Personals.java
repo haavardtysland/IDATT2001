@@ -2,8 +2,8 @@ package Oblig2;
 /**
  * Personalia.java  2010‐01‐18
  *
- * Klasse med personopplysninger: fornavn, etternavn, epostadresse og passord.
- * Passordet kan endres, men da mÃ¥ det nye vÃ¦re forskjellig fra det gamle.
+ * Klasse med personopplysninger: navn, etternavn, epostadresse og passord.
+ * Passordet kan endres, men da mÃ¥ det nye vÃ¦re skjellig fra det gamle.
  * Passordkontrollen skiller ikke mellom store og smÃ¥ bokstaver.
  */
 class Personals {
@@ -13,7 +13,7 @@ class Personals {
     private String password;
     /**
      * KonstruktÃ¸r:
-     * Alle data mÃ¥ oppgis: fornavn, etternavn, ePostadr, passord
+     * Alle data mÃ¥ oppgis: navn, etternavn, ePostadr, passord
      * Ingen av dataene kan vÃ¦re null eller blanke strenger.
      */
     public Personals(String firstname, String surname, String ePostadr, String password) {
@@ -46,9 +46,9 @@ class Personals {
         return this.password.equalsIgnoreCase(password);
     }
     /**
-     * Metoden setter nytt passord, dersom det er forskjellig fra
+     * Metoden setter nytt passord, dersom det er skjellig fra
      * det gamle. To passord betraktes som like dersom det kun er
-     * forskjeller i store/smÃ¥ bokstaver.
+     * skjeller i store/smÃ¥ bokstaver.
      *
      * Metoden returnerer true dersom passordet ble endret, ellers false.
      */
