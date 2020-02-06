@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Øvinger/Øving 2/Øving 2.iml" filepath="$PROJECT_DIR$/Øvinger/Øving 2/Øving 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Øvinger/Øvinger/Oblig.iml" filepath="$PROJECT_DIR$/Øvinger/Øvinger/Oblig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Øvinger/Øving 3.iml" filepath="$PROJECT_DIR$/Øvinger/Øving 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Øvinger/Øving3.iml" filepath="$PROJECT_DIR$/Øvinger/Øving3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Øvinger/Øvinger.iml" filepath="$PROJECT_DIR$/Øvinger/Øvinger.iml" />
     </modules>
   </component>

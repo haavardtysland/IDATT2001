@@ -1,3 +1,5 @@
+package Oblig1;
+
 public class Card {
 
     private final char suit;
@@ -22,7 +24,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return String.mat("%s%s", suit, face);
+        return String.format("%s%s", suit, face);
     }
 
     public char getSuit() {

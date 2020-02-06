@@ -1,3 +1,5 @@
+package Oblig1;
+
 import java.util.ArrayList;
 
 public class Klient {
