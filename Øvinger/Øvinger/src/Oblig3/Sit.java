@@ -28,4 +28,8 @@ public class Sit extends Tribune {
         Ticket[] tickets = new Ticket[numberOfTickets];
         return tickets;
     }
+
+    public Ticket[] buyTicket(String[] names) {
+
+    }
 }
