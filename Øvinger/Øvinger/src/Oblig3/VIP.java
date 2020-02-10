@@ -29,4 +29,28 @@ public class VIP extends Tribune {
     public Ticket[] buyTicket(int numberOfTickets) {
         return null;
     }
+
+    private boolean availableOnSameRow(int numberOfTickets) {
+        int available = 0;
+        for(int i = 0; i < spectator.length; i++) {
+            available = 0;
+            for(int j = 0; j < spectator[i].length; j++) {
+                available++;
+                if(numberOfTickets <= available) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public Ticket[] buyTicket(String[] names) {
+        int numberOfTickets = names.length;
+        if(availableOnSameRow(numberOfTickets)) {
+            Ticket[] tickets = new Ticket[numberOfTickets];
+            return tickets;
+        }
+        return null;
+    }
 }

@@ -32,4 +32,14 @@ public abstract class Tribune {
 
     public abstract Ticket[] buyTicket(int numberOfTickets);
     public abstract Ticket[] buyTicket(String[] names);
+
+    @Override
+    public String toString() {
+        return "Tribune{" +
+                "tribuneName='" + tribuneName + '\'' +
+                ", capacity=" + capacity +
+                ", price=" + price +
+                ", income=" + findIncome() +
+                '}';
+    }
 }

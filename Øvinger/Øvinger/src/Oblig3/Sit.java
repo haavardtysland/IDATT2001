@@ -30,6 +30,11 @@ public class Sit extends Tribune {
     }
 
     public Ticket[] buyTicket(String[] names) {
-
+            int numberOfTickets = names.length;
+        if(numberOfTickets > availableTickets()) {
+            return null;
+        }
+        Ticket[] tickets = new Ticket[numberOfTickets];
+        return tickets;
     }
 }

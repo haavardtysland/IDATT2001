@@ -25,4 +25,13 @@ public class Stand extends Tribune {
         Ticket[] tickets = new Ticket[numberOfTickets];
         return tickets;
     }
+
+    public Ticket[] buyTicket(String[] names) {
+        int numberOfTickets = names.length;
+        if(numberOfTickets > availableTickets()) {
+            return null;
+        }
+        Ticket[] tickets = new Ticket[numberOfTickets];
+        return tickets;
+    }
 }
