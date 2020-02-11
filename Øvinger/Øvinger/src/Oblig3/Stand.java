@@ -18,20 +18,20 @@ public class Stand extends Tribune {
     }
 
     @Override
-    public Ticket[] buyTicket(int numberOfTickets){
+    public StandingTicket[] buyTicket(int numberOfTickets){
         if(numberOfTickets > availableTickets()){
             return null;
         }
-        Ticket[] tickets = new Ticket[numberOfTickets];
+        StandingTicket[] tickets = new StandingTicket[numberOfTickets];
+        for(int i = 0; i < numberOfTickets; i++) {
+            tickets[i] = new StandingTicket(getTribuneName(), getPrice());
+        }
         return tickets;
     }
 
-    public Ticket[] buyTicket(String[] names) {
+    @Override
+    public StandingTicket[] buyTicket(String[] names) {
         int numberOfTickets = names.length;
-        if(numberOfTickets > availableTickets()) {
-            return null;
-        }
-        Ticket[] tickets = new Ticket[numberOfTickets];
-        return tickets;
+        return buyTicket(numberOfTickets);
     }
 }
