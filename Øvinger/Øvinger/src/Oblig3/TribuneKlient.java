@@ -1,6 +1,7 @@
 package Oblig3;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class TribuneKlient {
     public static void main(String[] args) {
@@ -21,13 +22,31 @@ public class TribuneKlient {
 
         for(int i = 0; i < tribune.length; i++) {
             System.out.println(Arrays.toString(tribune[i].buyTicket(8)));
-            System.out.println(tribune[i]);
+            //System.out.println(tribune[i]);
         }
         for(int i = 0; i < tribune.length; i++) {
             System.out.println(Arrays.toString(tribune[i].buyTicket(names)));
+            //System.out.println(tribune[i]);
+        }
+       /* System.out.println(t3.findNumberOfSoldTickets());
+        System.out.println(t3.findIncome());
+
+        System.out.println("Før sjekk:");
+        for(int i = 0; i < tribune.length; i++) {
             System.out.println(tribune[i]);
         }
-        System.out.println(t3.findNumberOfSoldTickets());
-        System.out.println(t3.findIncome());
+
+        Arrays.sort(tribune, new SortByIncome());
+
+        System.out.println("Etter sjekk: \r\n");
+        for(int i = 0; i < tribune.length; i++) {
+            System.out.println(tribune[i]);
+        }*/
+    }
+}
+
+class SortByIncome implements Comparator<Tribune> {
+    public int compare(Tribune a, Tribune b) {
+        return b.findIncome() - a.findIncome();
     }
 }

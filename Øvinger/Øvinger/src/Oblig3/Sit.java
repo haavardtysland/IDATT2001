@@ -29,21 +29,7 @@ public class Sit extends Tribune {
         if(numberOfTickets > availableTickets()) {
             return null;
         }
-        int availableRow = -1;
-        int availableFrom= -1;
-        SittingTicket[] tickets = new SittingTicket[numberOfTickets];
-        for(int i = 0; i < noBusy.length; i++) {
-            if(noBusy[i] + numberOfTickets <= numberOfSeats()){
-                availableRow = i;
-                availableFrom =  noBusy[i] + 1;
-                for(int j = 0; j < numberOfTickets; j++) {
-                    tickets[j] = new SittingTicket(getTribuneName(),getPrice(), availableRow, availableFrom++);
-                }
-                noBusy[availableRow] += numberOfTickets;
-                return tickets;
-            }
-        }
-        return null;
+        return findAvailableTickets(numberOfTickets);
     }
 
     @Override
@@ -52,6 +38,10 @@ public class Sit extends Tribune {
         if(numberOfTickets > availableTickets()) {
             return null;
         }
+        return findAvailableTickets(numberOfTickets);
+    }
+
+    private SittingTicket[] findAvailableTickets(int numberOfTickets) {
         int availableRow = -1;
         int availableFrom= -1;
         SittingTicket[] tickets = new SittingTicket[numberOfTickets];
@@ -60,7 +50,7 @@ public class Sit extends Tribune {
                 availableRow = i;
                 availableFrom =  noBusy[i] + 1;
                 for(int j = 0; j < numberOfTickets; j++) {
-                    tickets[j] = new SittingTicket(getTribuneName(),getPrice(), availableRow, availableFrom++);
+                    tickets[j] = new SittingTicket(getTribuneName(),getPrice(), availableRow + 1, availableFrom++);
                 }
                 noBusy[availableRow] += numberOfTickets;
                 return tickets;
