@@ -2,10 +2,12 @@ package Oblig3;
 
 public class VIP extends Tribune {
     private String[][] spectator;
+    private final int seats;
 
     public VIP(String tribuneName, int capacity, int price, int rows) {
         super(tribuneName.trim(), capacity, price);
         this.spectator = new String[rows][capacity/rows];
+        this.seats = capacity/rows;
     }
 
     private int availableTickets() {
@@ -44,7 +46,7 @@ public class VIP extends Tribune {
     private int findAvailableOnRow(int row) {
         int available = 0;
         for(int i = 0; i < spectator[row].length; i++ ) {
-            if(spectator[row] == null) {
+            if(spectator[row][i] == null) {
                 available++;
             }
         }
@@ -64,7 +66,7 @@ public class VIP extends Tribune {
         SittingTicket[] tickets = new SittingTicket[numberOfTickets];
         if(findAvailableRow(numberOfTickets) >= 0) {
             int row = findAvailableRow(numberOfTickets);
-            int seat = findAvailableOnRow(row);
+            int seat = seats - findAvailableOnRow(row);
             for (int i = 0; i < numberOfTickets; i++) {
                 tickets[i] = new SittingTicket(getTribuneName(), getPrice(), row + 1, seat + 1);
                 seat++;
