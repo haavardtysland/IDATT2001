@@ -8,7 +8,7 @@ public class TribuneKlient {
         Stand t1 = new Stand("Storsalen", 300, 150, 295);
         Stand t2 = new Stand("Stavern festivalen", 15000, 2000, 13500);
         Sit t3 = new Sit("Viking stadion", 80, 300, 10 );
-        VIP t4 = new VIP("VIP" , 80, 1000, 10);
+        VIP t4 = new VIP("VIP" , 60, 1000, 10);
 
         Tribune[] tribune = new Tribune[4];
         tribune[0] = t1;
@@ -46,14 +46,14 @@ public class TribuneKlient {
         System.out.println(t3.findNumberOfSoldTickets());
         System.out.println(t3.findIncome());
 
-        System.out.println("Før sjekk:");
+        System.out.println("Før sortering:");
         for(int i = 0; i < tribune.length; i++) {
             System.out.println(tribune[i]);
         }
 
         Arrays.sort(tribune, new SortByIncome());
 
-        System.out.println("Etter sjekk: \r\n");
+        System.out.println("Etter sortering: \r\n");
         for(int i = 0; i < tribune.length; i++) {
             System.out.println(tribune[i]);
         }*/
