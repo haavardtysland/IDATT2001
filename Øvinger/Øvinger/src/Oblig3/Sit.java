@@ -24,23 +24,6 @@ public class Sit extends Tribune {
         return getCapacity() - findNumberOfSoldTickets();
     }
 
-    @Override
-    public SittingTicket[] buyTicket(int numberOfTickets) {
-        if(numberOfTickets > availableTickets()) {
-            return null;
-        }
-        return findAvailableTickets(numberOfTickets);
-    }
-
-    @Override
-    public SittingTicket[] buyTicket(String[] names) {
-        int numberOfTickets = names.length;
-        if(numberOfTickets > availableTickets()) {
-            return null;
-        }
-        return findAvailableTickets(numberOfTickets);
-    }
-
     private SittingTicket[] findAvailableTickets(int numberOfTickets) {
         int availableRow = -1;
         int availableFrom= -1;
@@ -58,4 +41,23 @@ public class Sit extends Tribune {
         }
         return null;
     }
+
+    @Override
+    public SittingTicket[] buyTicket(int numberOfTickets) {
+        if(numberOfTickets > availableTickets()) {
+            return null;
+        }
+        return findAvailableTickets(numberOfTickets);
+    }
+
+    @Override
+    public SittingTicket[] buyTicket(String[] names) {
+        int numberOfTickets = names.length;
+        if(numberOfTickets > availableTickets()) {
+            return null;
+        }
+        return findAvailableTickets(numberOfTickets);
+    }
+
+
 }

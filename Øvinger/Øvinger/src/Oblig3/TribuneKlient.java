@@ -26,7 +26,7 @@ public class TribuneKlient {
             System.out.println(Arrays.toString(tribune[i].buyTicket(8)));
         } */
 
-       for(int i = 0; i < tribune.length; i++) {
+       /*for(int i = 0; i < tribune.length; i++) {
            System.out.println("Tribune:");
            System.out.println(tribune[i]);
            System.out.println("Bilett(er):");
@@ -38,13 +38,13 @@ public class TribuneKlient {
             System.out.println(tribune[i]);
             System.out.println("Bilett(er):");
             System.out.println(Arrays.toString(tribune[i].buyTicket(names)));
-        }
+        }*/
 
 
 
-       /*
-        System.out.println(t3.findNumberOfSoldTickets());
-        System.out.println(t3.findIncome());
+
+        //System.out.println(t3.findNumberOfSoldTickets());
+        //System.out.println(t3.findIncome());
 
         System.out.println("Før sortering:");
         for(int i = 0; i < tribune.length; i++) {
@@ -56,7 +56,7 @@ public class TribuneKlient {
         System.out.println("Etter sortering: \r\n");
         for(int i = 0; i < tribune.length; i++) {
             System.out.println(tribune[i]);
-        }*/
+        }
     }
 }
 

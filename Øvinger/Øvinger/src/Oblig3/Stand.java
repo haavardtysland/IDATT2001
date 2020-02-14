@@ -17,6 +17,10 @@ public class Stand extends Tribune {
         return getCapacity() - noSoldTickets;
     }
 
+    public void sellTickets(int numberOfTickets) {
+        noSoldTickets += numberOfTickets;
+    }
+
     @Override
     public StandingTicket[] buyTicket(int numberOfTickets){
         if(numberOfTickets > availableTickets()){
@@ -26,6 +30,7 @@ public class Stand extends Tribune {
         for(int i = 0; i < numberOfTickets; i++) {
             tickets[i] = new StandingTicket(getTribuneName(), getPrice());
         }
+        sellTickets(numberOfTickets);
         return tickets;
     }
 
