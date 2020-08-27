@@ -1,0 +1,20 @@
+
+d
+java:S2259H"IA "NullPointerException" could be thrown; "bonusMember" is nullable here.(Ô¯—™ÿÿÿÿÿ
+_
+java:S2259P"IA "NullPointerException" could be thrown; "bonusMember" is nullable here.(Ğ·«¸
+E
+java:S1066"/Merge this if statement with the enclosing one.(ú×¥˜
+N	java:S106s"9Replace this use of System.out or System.err by a logger.(È®ò®
+S	java:S106z"9Replace this use of System.out or System.err by a logger.(·¤ øÿÿÿÿ
+N	java:S106{"9Replace this use of System.out or System.err by a logger.(È®ò®
+m	java:S1275"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ş¼Ş¢
+S	java:S106r"9Replace this use of System.out or System.err by a logger.(ãÚ«ıÿÿÿÿ
+S	java:S106y"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+N	java:S106v"9Replace this use of System.out or System.err by a logger.(­ú­•
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„¯ ñ
+N	java:S106u"9Replace this use of System.out or System.err by a logger.(–®É¼
+:
+java:S26762"Use the original value instead.(âÉåÁşÿÿÿÿ
+S	java:S106t"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+S	java:S106w"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ

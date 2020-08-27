@@ -1,0 +1,20 @@
+
+†
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ù‚şÓ
+‹
+java:S1319&"vThe type of the "randomCards" object should be an interface such as "List" rather than the implementation "ArrayList".(õÀªN
+7
+java:S1643C"Use a StringBuilder instead.(ˆ­Ï‚úÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›»¶öùÿÿÿÿ
+G
+java:S1612)",Replace this lambda with a method reference.(ßÕôÔúÿÿÿÿ
+R
+java:S36557"7Call "Optional#isPresent()" before accessing the value.(şÙ¥üÿÿÿÿ
+D
+java:S2140")Use "java.util.Random.nextInt()" instead.(ê·Ìşşÿÿÿÿ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(ßÕôÔúÿÿÿÿ
+M	java:S106,"9Replace this use of System.out or System.err by a logger.(¾™2
+N	java:S1060"9Replace this use of System.out or System.err by a logger.(ı¬›‰
+M	java:S1064"9Replace this use of System.out or System.err by a logger.(ÿäòf
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(÷ôşÇøÿÿÿÿ
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(‰Á•ô

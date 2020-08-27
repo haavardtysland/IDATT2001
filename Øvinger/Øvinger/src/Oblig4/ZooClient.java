@@ -28,9 +28,5 @@ public class ZooClient {
 
         zoo.setAnimals(animals);
 
-        zoo.getAnimals().
-
-        zoo.getAnimals().stream().filter(s -> )
-
     }
 }
